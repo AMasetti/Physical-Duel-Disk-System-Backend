@@ -1,0 +1,3 @@
+DUEL_DISK_COMM_PORT = 'COM10'
+BACK = 'b'
+NEXT_PHASE = 'n'
