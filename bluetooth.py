@@ -2,6 +2,7 @@ import time
 
 import serial
 import serial.tools.list_ports
+
 import constants as cte
 
 
@@ -16,6 +17,7 @@ def connect_duel_disk():
         timeout=1)
     ser.readline()
     ser.flushInput()
+    print("Duel Disk on port: " + ser.portstr)
     return ser
 
 
@@ -48,8 +50,8 @@ def check_connection(ser) -> bool:
     return connected
 
 
-def select_card_id(ser):
-    """ Read card data from serial connection"""
+def select_card_id(ser) -> int:
+    """ Read card data from serial connection return int"""
     time.sleep(0.4)
     user_input = ser.readline().decode("utf-8")
     ser.flushInput()
@@ -62,4 +64,4 @@ def select_card_id(ser):
             ser.flushInput()
     else:
         user_input = user_input[0]
-    return user_input
+    return int(user_input)
