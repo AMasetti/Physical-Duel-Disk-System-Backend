@@ -7,3 +7,5 @@ SUMMON_DATA = {
     'yugiohCardId': '',
     'zoneName': '',
 }
+
+MONSTER_ZONES_STR = ['mainMonster1', 'mainMonster2', 'mainMonster3']

@@ -64,4 +64,4 @@ def select_card_id(ser) -> int:
             ser.flushInput()
     else:
         user_input = user_input[0]
-    return int(user_input)
+    return user_input
